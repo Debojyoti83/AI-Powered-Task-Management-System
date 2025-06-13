@@ -22,11 +22,11 @@ priorities = ['Low', 'Medium', 'High', 'Critical']
 statuses = ['Not Started', 'In Progress', 'On Hold', 'Completed', 'Cancelled']
 departments = ['Engineering', 'Marketing', 'Sales', 'HR', 'Finance', 'Operations', 'Legal']
 
-# User pools for assignment
+# User pools for task assignment
 users = [f'user_{i:03d}' for i in range(1, 201)]  # 200 users
 managers = [f'manager_{i:02d}' for i in range(1, 31)]  # 30 managers
 
-# Task description templates for more realistic text
+# Task description templates
 task_templates = [
     "Implement {} functionality for the {} module",
     "Review and update {} documentation for {} process",
@@ -166,7 +166,7 @@ for i in range(n_rows):
 # Create DataFrame
 df = pd.DataFrame(data)
 
-# Introduce realistic missing values
+# Introduce some missing values
 print("Introducing missing values...")
 
 # Missing completion dates for non-completed tasks (realistic)
